@@ -1,0 +1,10 @@
+# Site settings
+title: thisisyojan/blog 
+email: thisisyojan@gmail.com 
+description: "We're all spiders weaving the web." 
+baseurl: "/blog/"
+url: "http://yourdomain.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
