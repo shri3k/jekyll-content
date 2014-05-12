@@ -2,8 +2,8 @@
 title: thisisyojan/blog 
 email: thisisyojan@gmail.com 
 description: "We're all spiders weaving the web." 
-baseurl: "/blog/"
-url: "http://yourdomain.com"
+baseurl: ""
+url: "http://sinkingshriek.github.io"
 twitter-username: shri3k
 github-username: sinkingshriek/jekyll-content
 
