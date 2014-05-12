@@ -10,4 +10,4 @@ Posted mostly weekly on the things I find interesting and useful for my fellow d
 
 [Send a pull request] [github-repo] if you have something to share and I'll put them here.
 
-[github-repo]: http://www.github.com/sinkingshriek/sinkingshriek.github.io.git
+[github-repo]: https://github.com/sinkingshriek/jekyll-content

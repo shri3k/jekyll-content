@@ -4,6 +4,9 @@ email: thisisyojan@gmail.com
 description: "We're all spiders weaving the web." 
 baseurl: "/blog/"
 url: "http://yourdomain.com"
+twitter-username: shri3k
+github-username: sinkingshriek/jekyll-content
+
 
 # Build settings
 markdown: kramdown
