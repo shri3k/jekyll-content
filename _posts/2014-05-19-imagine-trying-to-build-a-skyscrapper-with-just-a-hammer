@@ -20,3 +20,15 @@ _The following pertains only to Chrome DevTools_
 + Workspaces tab //if you want to live code on Chrome discussed later
 + Shortcuts //Learn those shortcuts for maximum efficiency, also discussed later
 
+###Console Tab
+Shortcuts:-  
+_In Firefox_  
+`Ctrl + Shift + K` //this will take you straight to the Web Console even if you're in devtools (You'll know why I mentioned this)
+
+_In Chrome_  
+`Ctrl + 9` //if you're already in devtools and has enabled `Ctrl 1-9 shortcut to switch panels` from earlier   
+`Ctrl + Shift + J` //to jump straight to Web Console from your normal browser. Invoking this shortcut again in the devtools will open another devtools for your devtools. This will go as deep as your mind will let you.
+
+
+This console acts like interpreter and well, for logging purposes of course.
+
