@@ -9,4 +9,14 @@ There are plenty of tutorials, tips and tricks on dev tools in the internet and 
 With that said, let's start from ground zero. The fastest way to get to the developer tools in either Chrome or Firefox by pressing `Ctrl + Shift + I` (Mac users, you know very well what keys corresponds on your Mac with these shortcuts). Some other might even prefer `F12` but I usually go for the former since F12 is much farther than those three keys.
 
 ###Changing Settings of devtools
-I've seen most people never enter settings even after their heavy usage of devtools. There are some really powerful options available under that options. If you don't know how to get there then it's usually the `gear icon` on your devtools in Chrome and in Firefox.  
+Shortcut:-
+_In Chrome only_
+`?` or `F1`  
+I've seen most people never enter settings even after their heavy usage of devtools. There are some really powerful options available under that options. If you don't know how to get there then it's usually the `gear icon` on your devtools in Chrome and in Firefox.
+Click on it and if you're going to be developing on that browser then I would do:-
++ Disable Cache //this way your browser doesn't cache your js and css so that you can changes promptly after changes.
+_The following pertains only to Chrome DevTools_
++ Enable Ctrl + 1 - 9 shortcut to switch panels (self-explanatory which lets you jump to the tabs by pressing Ctrl + numeric key)
++ Workspaces tab //if you want to live code on Chrome discussed later
++ Shortcuts //Learn those shortcuts for maximum efficiency, also discussed later
+
