@@ -39,4 +39,7 @@ Right click will give you option to `log requests and response bodies`. What thi
 _In Chrome_
 Right click will give you more options than Firefox although you're not losing any functionality per se. If you want to preserve the logs upon navigation then enable `Preserve Log Upon Navigation`. This does exactly what it says, if you're jumping over pages then instead of clearing the console on every new page it stores your earlier logs for you. 
 ####Clear console
-The easiest way to clear the console is to just press `Ctrl + L`. That's it. You don't have to type `clear()` or right click and click `Clear Console` or find any obtuse icons. 
+The easiest way to clear the console is to just press `Ctrl + L`. That's it. You don't have to type `clear()` or right click and click `Clear Console` or find any obscure icons. 
+There are certain hotkeys in console that people aren't aware of.  
+'$0-4' 
+So, if you inspect element or even select any element on 'Element tab' then '$0' becomes that element. As you select the other item then what was $0 now becomes '$1' and then so on.
