@@ -71,7 +71,7 @@ Say, you just inspected (right-click on website and select Inspect) something on
 So, you know how to get the DOM elements using `$0 - $4` but let's say you have to find out the element with certain selector. You could inspect all the element in the site or even search (`Ctrl+F`) in `Element panel` but that's tedious. But wait, you know some JavaScript. So you can just do :-
 * `document.getElementById('some-selector');` || 
 * `document.querySelector('some-selector');` _//heads up this is not same as `document.getElementById()`
-Orr, you could just use the alias to `document.querySelector('some-selector')` in devtools which is `$('some-selector')`
+Or, you could just use the alias of `document.querySelector('some-selector')` in devtools which is `$('some-selector')`. That's it.
 
 ####$$(selector)
 You try doing `$(selector)` but all you're getting is just one result. And then you realize that it's just doing what `document.querySelector()` was doing and sighed at yourself. Now you need something aliased to `document.querySelectorAll()`. And as you can already figure out from the heading that you can achieve just that by using `$$(selector)` and it will list out an array of all the elements with that selector.
@@ -83,6 +83,41 @@ And if you happen to know [XPath](https://developer.mozilla.org/en-US/docs/Web/X
 * getEventListeners(object)
 * monitorEvents(object, [events])
 * unmonitorEvents( object, [events])
+
+####getEventListeners(object)  
+Okay, so you're quite happy with what you have right now with all the query selectors at your disposal. And soon you realize that it's about time to put some interactivity to your webpage. The most common thing to put interactivity in the webpage is to listen to any events in the page and act accordingly. Sure, if it's a simple site, like this is, there may not be too much event in the page but as your webpage start getting more complex it'll be crucial to know what event is called on a specific element. Again, you could do it manually and go to your editor and start searching for it or you could use tools that devtools provide you and be more productive. `getEventListenters(object)` is just the function that helps you pinpoint what function is being invoked on the specified event. Let's look at an example on how it works.
+Syntax:-
+`getEventListeners(DOM object,[events]);`  
+
+`getEventListeners(document.querySelector('testme'), "click");`  
+What the above statement does is, it lists out the click event for the `testme` element. Of course, you could use `$('testme')` or `$0` to get that element but I'll leave it up to you to be creative with what you can do.
+
+The above returns a click object for that element and the function that will be invoked in the `listener` key.  
+Remember, the event parameter is totally optional. If you don't specify it then it will return all the event that's attached to that element.  
+Do note however, that if you're adding listenter with `jquery` then the `listener` will display `jquery's` wrapper function than yours. This deserves a post on it's own so I'm not going to dwell more on it but if you want to list the listener that's been done purely by `addEventListener` then `getEventListeners` should be more than enough. If you want to play more then here's the [fiddle](http://jsfiddle.net/shriek/QXC5B/) for you. (Note that since jsfiddle uses iframe you might not be able to find the element)
+
+####monitorEvents(object,[events])  
+So far you've learned how to get elements with aliased query selectors, list the functions that will get invoked on events. But once-a-while there will come a time when your event will get triggered when it's not supposed to causing all kinds of weird behaviors. For that very instance you can use `monitorEvents()` function. This does exactly what it says. It simply monitors the events and logs whenever the event gets triggered on the specified element. Looking back to our earlier example let's now monitor events on that click now.
+`monitorEvents(document.querySelector('testme'), 'click');`
+This will log out Mouse Event object. According to the Paul Irish which was posted on [this](http://www.briangrinstead.com/blog/chrome-developer-tools-monitorevents) post. 
+> If the second argument is ‘mouse’, you’ll get all “mousedown”, “mouseup”, “click”, “dblclick”, “mousemove”, “mouseover”, “mouseout”, “mousewheel” events
+> If the second argument is ‘key’, you’ll get all “keydown”, “keyup”, “keypress”, “textInput” events
+> If the second argument is ‘touch’, you’ll get all “touchstart”, “touchmove”, “touchend”, “touchcancel” events. (See emulate touch events in devtools settings!!)
+> If the second argument is ‘control’, you’ll get all “resize”, “scroll”, “zoom”, “focus”, “blur”, “select”, “change”, “submit”, “reset” events.
+> If you don’t define a second argument, you’ll get all of the above, plus… “load”, “unload”, “abort”, “error”, “select”, “change”, “submit”, “reset”, “focus”, “blur”, “resize”, “scroll”, “search”, “devicemotion”, “deviceorientation” .
+The comment above should sum up the monitorEvents for you if not then here's the official docs on 
+[Chrome](https://developer.chrome.com/devtools/docs/commandline-api#monitoreventsobject-events)
+[Firefox](https://getfirebug.com/wiki/index.php/MonitorEvents#Event_groups) (even though it's doc for firebug, I think they're fairly similar)
+
+
+####unmonitorEvents(object, [events])
+And if you want to stop monitoring for events then you can just use this function to stop listening. Also, you can stop listening to any one specific event if you were listening to multiple events. An example:-
+`monitorEvents(document.querySelector('.testme'), 'mouse')`
+`unmonitorEvents(document.querySelector('.testme'),'mouseover')`
+
+
+
+
 
 
 
