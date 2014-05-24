@@ -3,7 +3,7 @@
 Think of us, devs, as construction workers. Let's just pretend for now that we're construction workers. You're given all these ideas and blueprints by architects and business people and everything that's involved in construction. You are provided with all the needed resources that's needed to get this herculean task done but the problem is that you have no clue how to operate those big cranes, excavators, forklifts and other that's provided to you but say you're an expert in using wrench. I'm not saying it's completely useless, well maybe to screw things when one of the nuts come lose in those bigger machineries but the point is you need to learn tools if you're even conceiving of making big web-apps. This doesn't just apply to web-apps. This applies to pretty much in all fields. So you, as a web-developer better know your tools well.
 
 ##DevTools
-There are plenty of tutorials, tips and tricks on dev tools in the internet and this one isn't going to be different either. I can't stress this enough. Learn to master *DEVTOOLS*. It might feel like I'm shoving it down your throat because I am. If you're going to be a decent developer then not knowing this should be a crime.
+There are plenty of tutorials, tips and tricks on dev tools in the Internet and this one isn't going to be different either. I can't stress this enough. Learn to master *DEVTOOLS*. It might feel like I'm shoving it down your throat because I am. If you're going to be a decent developer then not knowing this should be a crime.
 
 ###Opening devtools
 With that said, let's start from ground zero. The fastest way to get to the developer tools in either Chrome or Firefox by pressing `Ctrl + Shift + I` (Mac users, you know very well what keys corresponds on your Mac with these shortcuts). Some other might even prefer `F12` but I usually go for the former since F12 is much farther than those three keys.
@@ -11,24 +11,32 @@ With that said, let's start from ground zero. The fastest way to get to the deve
 ###Changing Settings of devtools
 Shortcut:-
 _In Chrome only_
-`?` or `F1`  
+`?` or `F1`   
 I've seen most people never enter settings even after their heavy usage of devtools. There are some really powerful options available under that options. If you don't know how to get there then it's usually the `gear icon` on your devtools in Chrome and in Firefox.
 Click on it and if you're going to be developing on that browser then I would do:-
-+ Disable Cache //this way your browser doesn't cache your js and css so that you can changes promptly after changes.
++ Disable Cache _//this way your browser doesn't cache your js and css so that you can changes promptly after changes._  
 _The following pertains only to Chrome DevTools_
-+ Enable Ctrl + 1 - 9 shortcut to switch panels (self-explanatory which lets you jump to the tabs by pressing Ctrl + numeric key)
-+ Workspaces tab //if you want to live code on Chrome discussed later
-+ Shortcuts //Learn those shortcuts for maximum efficiency, also discussed later
++ Enable Ctrl + 1 - 9 shortcut to switch panels (self-explanatory which lets you jump to the tabs by pressing `Ctrl + [numeric key]`)
++ Workspaces tab _//if you want to live code on Chrome which is discussed later_
++ Shortcuts _//Learn those shortcuts for maximum efficiency, also discussed later_
 
 ###Console Tab
-Shortcuts:-  
+*Shortcuts:-*  
 _In Firefox_  
-`Ctrl + Shift + K` //this will take you straight to the Web Console even if you're in devtools (You'll know why I mentioned this)
+`Ctrl + Shift + K` _//this will take you straight to the Web Console even if you're in devtools (You'll soon know why I mentioned this)_  
+`Ctrl + Shift + J` _//this will only bring up the Web console window and nothing else._  
 
 _In Chrome_  
-`Ctrl + 9` //if you're already in devtools and has enabled `Ctrl 1-9 shortcut to switch panels` from earlier   
-`Ctrl + Shift + J` //to jump straight to Web Console from your normal browser. Invoking this shortcut again in the devtools will open another devtools for your devtools. This will go as deep as your mind will let you.
+`Ctrl + Shift + J` _//to jump straight to Web Console from your normal browser. Invoking this shortcut again in the devtools will open another devtools for your devtools. This will go as deep as your mind will let you._  
+`Ctrl + 9` _//if you're already in devtools and has enabled `Ctrl 1-9 shortcut to switch panels` as mentioned above._
 
 
-This console acts like interpreter and well, for logging purposes of course.
+The console acts like interpreter and well, for logging. You can pretty much do your full programming here too (although not recommended). However, there are other options here in console window than just this. 
 
+_In Firefox_  
+Right click will give you option to `log requests and response bodies`. What this means is it 
+
+_In Chrome_
+Right click will give you more options than Firefox although you're not losing any functionality per se. If you want to preserve the logs upon navigation then enable `Preserve Log Upon Navigation`. This does exactly what it says, if you're jumping over pages then instead of clearing the console on every new page it stores your earlier logs for you. 
+####Clear console
+The easiest way to clear the console is to just press `Ctrl + L`. That's it. You don't have to type `clear()` or right click and click `Clear Console` or find any obtuse icons. 
