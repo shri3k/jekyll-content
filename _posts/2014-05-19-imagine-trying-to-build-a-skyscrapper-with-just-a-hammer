@@ -2,22 +2,24 @@
 
 Think of us, devs, as construction workers. Let's just pretend for now that we're construction workers. You're given all these ideas and blueprints by architects and business folks and everything that's needed for construction. You are provided with all the possible resources that you can possibly think of to get this herculean task done but the problem is that you have no clue how to operate those big cranes, excavators, forklifts etc but you're an expert in using wrench. I'm not saying it's completely useless, well maybe to screw things when one of the nuts come lose in those bigger machinery but the point is you need to learn tools if you're even conceiving of making big web-apps. This doesn't just apply to web-apps. This applies to pretty much in all fields. So you, as a web-developer better know your tools well.
 
+_I'm going to split this post into multiple posts as it got much bigger than I expected._
+
 ##DevTools
-There are plenty of tutorials, tips and tricks on dev tools in the Internet and this one isn't going to be different either. I can't stress this enough. Learn to master *DEVTOOLS*. It might feel like I'm shoving it down your throat because I am. If you're going to be a decent developer then not knowing this should be a crime. I'll walk you through devtools in a scenario based events. I won't be giving out all the possible things that devtools can do because if I did then I might just point you to the devtool's `API` which are far more in-depth than mine can ever be and also far more updated. I will take a journey and then dig out the details in that way. I'll try my best to include journey both for latest Chrome and Firefox. With that said let's begin our journey.
+There are plenty of tutorials, tips and tricks on dev tools in the Internet and this one isn't going to be different either. I can't stress this enough. Learn to master *DEVTOOLS*. It might feel like people are shoving trying to shove it down your throat because it's a crucial part of being a web-developer. If you're going to be a decent developer then not knowing this should be a crime. This post is not going to dive into details into all the possibilities that devtools has to offer but give you overview on what power it holds. However I will present the link to go deeper on them if you want to know more of the APIs. I will try to cover for both Firefox and Chrome (sorry IE) but not going to do one on one comparison. Oh and another disclaimer is that this is geared more towards PC so if you're Mac user then the shortcut might be a little different. Usually, the `Ctrl` is replaced with `Cmd`. Okay, let's begin.
 
 ##Opening devtools
-The fastest way to get to the developer tools in either Chrome or Firefox is by pressing `Ctrl + Shift + I` (Sorry Mac users but I don't have Mac and I'm pretty sure the shortcuts presented here are similar except for the Ctrl which replaces with Cmd key). Some other might even prefer `F12` but I usually go for the former since F12 is much farther than those three keys. You can also go the old route of right clicking and selecting `Inspect Element` which will open up your devtools with `Element tab` being active and focusing on the element that was pointed to by your mouse (assuming that the mouse click is on your browser, duh). There are also other ways to open your devtools like going to the Settings -> Tools -> Developer Tools in Chrome or Tools -> Wev Developer -> Toggle Tools. 
+The fastest way to get to the developer tools in either Chrome or Firefox is by pressing `Ctrl + Shift + I`. Others might prefer `F12` but I usually go for the former since `F12` is much farther than those three keys. You can also take the old route of right clicking and selecting `Inspect Element` which will open up your devtools with `Element panel` being active and focusing on the element that was pointed to by your mouse (assuming that the mouse click is on your browser). There are also other ways to open your devtools like going to the Settings -> Tools -> Developer Tools in Chrome or Tools -> Wev Developer -> Toggle Tools in Firefox. 
 
 ##Changing Settings of devtools
 Shortcut:-
 _In Chrome only_
 `?` or `F1`   
-You have your devtools open and before you do anything I highly, highly recommend you change some of the settings first. I've seen many people never enter settings even after their heavy usage of devtools. There are some really powerful options available under that settings. All you have to do is press that `gear icon` on your devtools in Chrome and in Firefox or if you're in Chrome then you can just use the shortcut provided above. The options might be not at the exact place in Firefox and Chrome but if you read through some of them then it's not that hard to make connections between them. Not all options of one browser is guaranteed to be available in another so depending on what you want you might favor one for another. But that's a different topic on it's own let's just change some settings for now:-
+You have your devtools open and before you do anything I highly, highly recommend you change some of the settings first. I've seen many people never enter settings even after their heavy usage of devtools. There are some really powerful options available under that settings. All you have to do is press that `gear icon` on your devtools in Chrome and in Firefox or if you're in Chrome then you can just use the shortcut provided above. The options might not be at the exact place in Firefox and Chrome but if you read through some of them then it's not that hard to make connections between them. Also, not all options of one browser is guaranteed to be available in another, so depending on what you want you might favor one over another. But that's a different topic on it's own let's just change some settings for now:-
 + Disable Cache _//this way your browser doesn't cache your js and css so that you can changes promptly after changes._  
 _The following pertains only to Chrome DevTools_
 + Enable Ctrl + 1 - 9 shortcut to switch panels (self-explanatory which lets you jump to the tabs by pressing `Ctrl + [numeric key]`)
 + [Workspaces tab][#workspace_tab] _//if you want to live code on Chrome which is discussed later_
-+ [Shortcuts][#shortcuts] _//Learn those shortcuts for maximum efficiency, also discussed later_
++ [Shortcuts][#shortcuts] _//Learn those shortcuts for maximum efficiency, also discussed later_  
 Got your settings all setup? Alright, let's start digging those hidden treasures that devtools has to offer.
 
 ##Console Tab
@@ -42,7 +44,7 @@ Right click will give you more options than Firefox although you're not losing a
 * Log XMLHttpRequest  
   This is to log your AJAX requests just in case if you ever needed that even though it's available in `Network tab`.
 
-Okay okay no more transients. Diving deep in console now.
+Okay okay no more transients. Diving in console now.
 ###Clear console
 _Shortcut_
 `Ctrl + L`  
@@ -115,16 +117,24 @@ And if you want to stop monitoring for events then you can just use this functio
 `monitorEvents(document.querySelector('.testme'), 'mouse')`
 `unmonitorEvents(document.querySelector('.testme'),'mouseover')`
 
+###copy
+Often times whenever I'm trying to debug `json` objects I have to copy the response or just have to search if the key exists or not. Sure I could just do `key in jsonResponseObj` or other techniques but this is about copying the values from console to your clipboard. Simple, just do :-
+`copy(anything-that-you-want-to-copy)`
+That's all there is to it.
+
+###keys(obj)
+If you want to just list out the keys instead of checking it with `in` keyword then you can just `keys` function to list out all keys in your object.
+keys({'hey': 'there', 'how':'you'}); // ['hey', 'how']
+
+###values(obj)
+Opposite to `keys`, `values` is used to list out all the values in an object.
+`values({'hey': 'there', 'how':'you'})` _//will result in ['there', 'you']_ 
+You can simple do the following to check if certain value exists or not if you want something similar to `in` for values.
+`values({'hey': 'there', 'how':'you'}).indexOf('hey') > -1` _//true_
 
 
-
-
-
-
-Besides above there's are lot of things that console API is capable of doing things that I'm not going to point out simply because the docs are much more better and also this API has slight variation on different browsers to listing them all out here will be ludicrous. 
+Besides mentioned above there are lot of things that console API is capable of doing simply because it is quite extensive and also because the docs are much more better at it. Also the API has slight variation on different browsers. Maybe in future I'll point out some of the most useful functions but for now here are the docs.
 [Firefox Console API](https://developer.mozilla.org/en-US/docs/Web/API/console)
 [Chrome Console API](https://developer.chrome.com/devtools/docs/console-api)
 
-
-
-
+In my next post I'll be talking about `Debugger panel`. Feel free to raise issues if you see something glaringly wrong in this post. 
