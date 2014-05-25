@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Imagine trying to build a skyscraper with just a wrench."
+date:   2014-05-24 01:34:19
+categories: casual devtools
+---
 #Imagine trying to build a skyscraper with just a wrench.
 
 Think of us, devs, as construction workers. Let's just pretend for now that we're construction workers. You're given all these ideas and blueprints by architects and business folks and everything that's needed for construction. You are provided with all the possible resources that you can possibly think of to get this herculean task done but the problem is that you have no clue how to operate those big cranes, excavators, forklifts etc but you're an expert in using wrench. I'm not saying it's completely useless, well maybe to screw things when one of the nuts come lose in those bigger machinery but the point is you need to learn tools if you're even conceiving of making big web-apps. This doesn't just apply to web-apps. This applies to pretty much in all fields. So you, as a web-developer better know your tools well.
