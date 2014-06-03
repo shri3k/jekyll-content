@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How node modules actually loads."
+title:  "How node modules actually load."
 date:   2014-05-30 02:34:19
 categories: node
 ---
