@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Debugging Node"
+date:   2014-07-4 01:34:19
+categories: casual debugging
+comments: true
+---
+
+I like to think of debugging as dissecting human being. Okay, that's a bit extreme comparison but nevertheless you have to analyze and be a doctor of your or someone else's (someone else's mostly..trust me) code. And debugging is a crucial part of understanding the code. No matter how complex the code is if you have a good debugger then you can always win.  
+So, now that we've established that debugging is important -- how exactly do we debug our node code?  
+Believe it or not, Node comes with a built-in debugger, albeit not a very good one (I'll later expose where it really shines compared to the alternative one) but it's a start.  
+
